@@ -1,10 +1,10 @@
 import s from "./Statistics.module.css";
 import PropTypes from "prop-types";
 
-function Statistics({ stats }) {
+function Statistics({ stats, title }) {
   return (
     <section className={s.statistics}>
-      <h2 className={s.title}>Upload stats</h2>
+      {title && <h2 className={s.title}>{title}</h2>}
       <ul className={s.statList}>
         {stats.map((data) => (
           <li className={s.item} key={data.id}>
